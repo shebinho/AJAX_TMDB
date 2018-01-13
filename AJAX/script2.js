@@ -13,6 +13,8 @@ $("#movieSearch").on("submit",function(e){
         headers: {},
         data: {},
         success: function(response){
+            let movieDiv = $(".movie");
+              movieDiv.html("");
             for(var i = 0; i < response.results.length; i++){
                 let movieDiv = $(".movie");
                 var movieText = response.results[i].title;
